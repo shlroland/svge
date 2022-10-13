@@ -5,5 +5,6 @@ module.exports = {
       'error',
       { devDependencies: ['*.config.*', 'config/*'] },
     ],
+    '@typescript-eslint/no-var-requires': 'off',
   },
 }
