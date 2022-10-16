@@ -1,5 +1,5 @@
 {
-  "name": "@svge/core",
+  "name": "@svge/plugin-vue",
   "description": "Transform SVG into Vue Components.",
   "version": "0.0.1",
   "publishConfig": {
@@ -24,8 +24,6 @@
     "build": "pnpm reset && tsc "
   },
   "dependencies": {
-    "@svge/plugin-vue": "workspace:^0.0.1",
-    "camelcase": "^6.2.0",
-    "cosmiconfig": "^7.0.1"
+    "@svge/core": "workspace:^0.0.1"
   }
 }

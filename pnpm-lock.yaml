@@ -38,11 +38,19 @@ importers:
 
   packages/core:
     specifiers:
+      '@svge/plugin-vue': workspace:^0.0.1
       camelcase: ^6.2.0
       cosmiconfig: ^7.0.1
     dependencies:
+      '@svge/plugin-vue': link:../plugin-vue
       camelcase: 6.3.0
       cosmiconfig: 7.0.1
+
+  packages/plugin-vue:
+    specifiers:
+      '@svge/core': workspace:^0.0.1
+    dependencies:
+      '@svge/core': link:../core
 
 packages:
 
