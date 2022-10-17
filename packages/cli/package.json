@@ -2,6 +2,7 @@
   "name": "@svge/cli",
   "description": "SVGE Command Line",
   "version": "0.0.1",
+  "type": "module",
   "publishConfig": {
     "access": "public"
   },
@@ -18,11 +19,17 @@
     "build": "pnpm reset && tsc "
   },
   "dependencies": {
+    "@svge/core": "workspace:^0.0.1",
     "@svge/plugin-vue": "workspace:^0.0.1",
+    "chalk": "^5.1.2",
     "commander": "^9.4.1",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "ramda": "^0.28.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13"
+    "@types/fs-extra": "^9.0.13",
+    "@types/glob": "^8.0.0",
+    "@types/ramda": "^0.28.16"
   }
 }
