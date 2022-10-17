@@ -1,0 +1,28 @@
+{
+  "name": "@svge/cli",
+  "description": "SVGE Command Line",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "svge": "./bin/svge"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT",
+  "scripts": {
+    "reset": "rm -rf dist",
+    "build": "pnpm reset && tsc "
+  },
+  "dependencies": {
+    "@svge/plugin-vue": "workspace:^0.0.1",
+    "commander": "^9.4.1",
+    "fs-extra": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
+  }
+}
