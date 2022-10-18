@@ -21,9 +21,12 @@
   "license": "MIT",
   "scripts": {
     "reset": "rm -rf dist",
-    "build": "pnpm reset && tsc "
+    "build": "pnpm reset && tsup src/index.ts --dts --format esm,cjs"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@svge/core": "workspace:^0.0.1"
+  },
+  "devDependencies": {
     "@svge/core": "workspace:^0.0.1"
   }
 }

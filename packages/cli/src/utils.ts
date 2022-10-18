@@ -1,6 +1,6 @@
 import type { Config, State } from '@svge/core'
 import { transform } from '@svge/core'
-import * as fs from 'fs-extra'
+import fs from 'fs-extra'
 import chalk from 'chalk'
 
 export const convert = (

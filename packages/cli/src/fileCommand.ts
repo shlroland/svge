@@ -1,4 +1,4 @@
-import * as fs from 'fs-extra'
+import fs from 'fs-extra'
 import type { CommandFunc } from './types'
 import { convert, convertFile, exitError } from './utils'
 

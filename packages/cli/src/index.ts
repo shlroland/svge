@@ -1,9 +1,11 @@
 /* eslint-disable no-console */
+import path from 'path'
 import { program } from 'commander'
-import { glob } from 'glob'
-import * as fs from 'fs-extra'
+import glob from 'glob'
+import fs from 'fs-extra'
 import * as R from 'ramda'
 import { loadConfig } from '@svge/core'
+import { vuePlugin } from '@svge/plugin-vue'
 import { version } from '../package.json'
 import { fileCommand } from './fileCommand'
 import type { Options } from './types'
@@ -34,7 +36,7 @@ async function run() {
   await Promise.all(
     filenames.map(async (filename) => {
       try {
-        await fs.stat(filename)
+        await fs.stat(path.resolve(process.cwd(), filename))
       } catch (error) {
         errors.push(`${filename} does not exist`)
       }
@@ -47,9 +49,12 @@ async function run() {
   }
 
   const programOpts = R.reject(R.isNil)(program.opts<Options>())
-  const opts: Options = await loadConfig(programOpts, {
-    filePath: process.cwd(),
-  })
+  const opts: Options = await loadConfig(
+    { ...programOpts, plugins: [vuePlugin] },
+    {
+      filePath: process.cwd(),
+    },
+  )
   const command = fileCommand
 
   await command(opts, program, filenames)

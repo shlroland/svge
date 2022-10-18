@@ -1,4 +1,3 @@
-import { vuePlugin } from '@svge/plugin-vue'
 import type { Config } from './config'
 import type { State } from './state'
 
@@ -8,7 +7,7 @@ export interface Plugin {
 
 export type ConfigPlugin = string | Plugin
 
-const DEFAULT_PLUGINS: Plugin[] = [vuePlugin]
+const DEFAULT_PLUGINS: ConfigPlugin[] = []
 
 export const getPlugins = (config: Config): ConfigPlugin[] => {
   if (config.plugins) {

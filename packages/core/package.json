@@ -10,7 +10,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "default": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
   },
@@ -21,10 +21,12 @@
   "license": "MIT",
   "scripts": {
     "reset": "rm -rf dist",
-    "build": "pnpm reset && tsc "
+    "build": "pnpm reset && tsup src/index.ts --dts --format esm,cjs"
+  },
+  "peerDependencies": {
+    "@svge/plugin-vue": "workspace:^0.0.1"
   },
   "dependencies": {
-    "@svge/plugin-vue": "workspace:^0.0.1",
     "camelcase": "^6.2.0",
     "cosmiconfig": "^7.0.1"
   }
