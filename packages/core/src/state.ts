@@ -1,5 +1,4 @@
 import { parse as parsePath } from 'node:path'
-// @ts-expect-error ignore export =
 import camelCase from 'camelcase'
 
 export interface State {

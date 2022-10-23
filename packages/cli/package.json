@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@svge/core": "workspace:^0.0.1",
+    "@svge/plugin-svgo": "workspace:^0.0.1",
     "@svge/plugin-vue": "workspace:^0.0.1",
     "camelcase": "^7.0.0",
     "chalk": "^5.1.2",

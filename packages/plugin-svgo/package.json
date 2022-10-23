@@ -1,5 +1,5 @@
 {
-  "name": "@svge/core",
+  "name": "@svge/plugin-svgo",
   "description": "Transform SVG into Vue Components.",
   "version": "0.0.1",
   "publishConfig": {
@@ -24,13 +24,14 @@
     "build": "pnpm reset && tsup src/index.ts --dts --format esm,cjs"
   },
   "peerDependencies": {
-    "@svge/plugin-vue": "workspace:^0.0.1"
+    "@svge/core": "workspace:^0.0.1"
   },
   "dependencies": {
-    "camelcase": "^7.0.0",
-    "cosmiconfig": "^7.0.1"
+    "cosmiconfig": "^7.0.1",
+    "svgo": "^2.8.0"
   },
   "devDependencies": {
+    "@svge/core": "workspace:^0.0.1",
     "@types/svgo": "^2.6.4"
   }
 }

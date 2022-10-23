@@ -6,6 +6,7 @@ import fs from 'fs-extra'
 import * as R from 'ramda'
 import { loadConfig } from '@svge/core'
 import { vuePlugin } from '@svge/plugin-vue'
+import { svgoPlugin } from '@svge/plugin-svgo'
 import { version } from '../package.json'
 import { fileCommand } from './fileCommand'
 import type { Options } from './types'
@@ -51,7 +52,7 @@ async function run() {
 
   const programOpts = R.reject(R.isNil)(program.opts<Options>())
   const opts: Options = await loadConfig(
-    { ...programOpts, plugins: [vuePlugin] },
+    { ...programOpts, plugins: [svgoPlugin, vuePlugin] },
     {
       filePath: process.cwd(),
     },

@@ -1,4 +1,5 @@
 import { cosmiconfig, cosmiconfigSync } from 'cosmiconfig'
+import type { OptimizeOptions as SvgoOptions } from 'svgo'
 import type { ConfigPlugin } from './plugin'
 import type { State } from './state'
 
@@ -9,6 +10,10 @@ export interface Config {
   configFile?: string
   runtimeConfig?: boolean
   plugins?: ConfigPlugin[]
+  dimensions?: boolean
+  icon?: boolean | string | number
+  svgo?: boolean
+  svgoConfig?: SvgoOptions
 }
 
 export const DEFAULT_CONFIG: Config = {
@@ -16,6 +21,9 @@ export const DEFAULT_CONFIG: Config = {
   titleProp: false,
   descProp: false,
   runtimeConfig: true,
+  dimensions: true,
+  svgo: true,
+  icon: false,
 }
 
 const explorer = cosmiconfig('svge')
