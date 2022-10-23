@@ -42,33 +42,39 @@ importers:
     specifiers:
       '@svge/core': workspace:^0.0.1
       '@svge/plugin-vue': workspace:^0.0.1
+      '@types/dashify': ^1.0.1
       '@types/fs-extra': ^9.0.13
       '@types/glob': ^8.0.0
       '@types/ramda': ^0.28.16
+      camelcase: ^7.0.0
       chalk: ^5.1.2
       commander: ^9.4.1
+      dashify: ^2.0.0
       fs-extra: ^10.1.0
       glob: ^8.0.3
       ramda: ^0.28.0
     dependencies:
       '@svge/core': link:../core
       '@svge/plugin-vue': link:../plugin-vue
+      camelcase: 7.0.0
       chalk: 5.1.2
       commander: registry.npmmirror.com/commander/9.4.1
+      dashify: 2.0.0
       fs-extra: registry.npmmirror.com/fs-extra/10.1.0
       glob: 8.0.3
       ramda: 0.28.0
     devDependencies:
+      '@types/dashify': 1.0.1
       '@types/fs-extra': registry.npmmirror.com/@types/fs-extra/9.0.13
       '@types/glob': 8.0.0
       '@types/ramda': 0.28.16
 
   packages/core:
     specifiers:
-      camelcase: ^6.2.0
+      camelcase: ^7.0.0
       cosmiconfig: ^7.0.1
     dependencies:
-      camelcase: 6.3.0
+      camelcase: 7.0.0
       cosmiconfig: 7.0.1
 
   packages/plugin-vue:
@@ -504,6 +510,10 @@ packages:
     resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
     dev: true
 
+  /@types/dashify/1.0.1:
+    resolution: {integrity: sha512-fCHIbxCdnlJue1phjMPBGbpbxs+rHPqdoysFUqzhgaHm85oWKkVXHfYfvnWR+66q8AiuOE/UmpzlFImGuqai6A==}
+    dev: true
+
   /@types/glob/8.0.0:
     resolution: {integrity: sha512-l6NQsDDyQUVeoTynNpC9uRvCUint/gSUXQA2euwmTuWGvPY5LSDUu6tkCtJB2SvGQlJQzLaKqcGZP4//7EDveA==}
     dependencies:
@@ -932,9 +942,9 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /camelcase/6.3.0:
-    resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
-    engines: {node: '>=10'}
+  /camelcase/7.0.0:
+    resolution: {integrity: sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==}
+    engines: {node: '>=14.16'}
     dev: false
 
   /chalk/2.4.2:
@@ -1212,6 +1222,11 @@ packages:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
     engines: {node: '>=8'}
     dev: true
+
+  /dashify/2.0.0:
+    resolution: {integrity: sha512-hpA5C/YrPjucXypHPPc0oJ1l9Hf6wWbiOL7Ik42cxnsUOhWiCB/fylKbKqqJalW9FgkNQCw16YO8uW9Hs0Iy1A==}
+    engines: {node: '>=4'}
+    dev: false
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}

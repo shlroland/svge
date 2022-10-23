@@ -21,13 +21,16 @@
   "dependencies": {
     "@svge/core": "workspace:^0.0.1",
     "@svge/plugin-vue": "workspace:^0.0.1",
+    "camelcase": "^7.0.0",
     "chalk": "^5.1.2",
     "commander": "^9.4.1",
+    "dashify": "^2.0.0",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.3",
     "ramda": "^0.28.0"
   },
   "devDependencies": {
+    "@types/dashify": "^1.0.1",
     "@types/fs-extra": "^9.0.13",
     "@types/glob": "^8.0.0",
     "@types/ramda": "^0.28.16"

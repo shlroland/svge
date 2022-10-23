@@ -9,6 +9,7 @@ import { vuePlugin } from '@svge/plugin-vue'
 import { version } from '../package.json'
 import { fileCommand } from './fileCommand'
 import type { Options } from './types'
+import { dirCommand } from './dirCommand'
 
 program
   .version(version)
@@ -55,7 +56,7 @@ async function run() {
       filePath: process.cwd(),
     },
   )
-  const command = fileCommand
+  const command = opts.outDir ? dirCommand : fileCommand
 
   await command(opts, program, filenames)
 }
