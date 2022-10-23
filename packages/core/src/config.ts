@@ -1,4 +1,5 @@
 import { cosmiconfig, cosmiconfigSync } from 'cosmiconfig'
+import type { Options as PrettierOptions } from 'prettier'
 import type { OptimizeOptions as SvgoOptions } from 'svgo'
 import type { ConfigPlugin } from './plugin'
 import type { State } from './state'
@@ -14,6 +15,8 @@ export interface Config {
   icon?: boolean | string | number
   svgo?: boolean
   svgoConfig?: SvgoOptions
+  prettier?: boolean
+  prettierConfig?: PrettierOptions
 }
 
 export const DEFAULT_CONFIG: Config = {
@@ -24,6 +27,7 @@ export const DEFAULT_CONFIG: Config = {
   dimensions: true,
   svgo: true,
   icon: false,
+  prettier: true,
 }
 
 const explorer = cosmiconfig('svge')

@@ -1,19 +1,12 @@
 {
-  "name": "@svge/plugin-svgo",
-  "description": "Optimize SVG",
+  "name": "@svge/plugin-prettier",
+  "description": "format svg code by prettier",
   "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
-    },
-    "./package.json": "./package.json"
-  },
   "keywords": [],
   "engines": {
     "node": ">=14"
@@ -21,17 +14,18 @@
   "license": "MIT",
   "scripts": {
     "reset": "rm -rf dist",
-    "build": "pnpm reset && tsup src/index.ts --dts --format esm,cjs"
+    "build": "pnpm reset && tsup src/index.ts --dts"
   },
   "peerDependencies": {
     "@svge/core": "workspace:^0.0.1"
   },
   "dependencies": {
-    "cosmiconfig": "^7.0.1",
-    "svgo": "^2.8.0"
+    "deepmerge": "^4.2.2",
+    "prettier": "2.7.1"
   },
   "devDependencies": {
     "@svge/core": "workspace:^0.0.1",
-    "@types/svgo": "^2.6.4"
+    "@types/deepmerge": "^2.2.0",
+    "@types/prettier": "^2.7.1"
   }
 }
